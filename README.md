@@ -16,9 +16,17 @@ Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar 
 
 De que coisas você precisa para instalar o software e como instalá-lo?
 
-Godot Engine v4.3 minimo
+-Godot Engine v4.3 (minimo)
+-Steam e Steam Account(Opcional)
 ```
-Dar exemplos
+Se tiver Steam:
+	A engine é disponibilizada na propria Steam, instalando como qualquer outro jogo
+Se não tiver Steam:
+	Godot está disponível no [site oficial](https://godotengine.org/). Baixe e siga as instruções de instalação
+	
+Recomendo fortemente [instalar a Steam e criar uma conta](https://store.steampowered.com/about/), e instalar o Godot por lá, simplesmente por que a Steam toma conta dos updates. 
+
+Aproveitando que tem uma conta Steam, [adicione os devs como amigos](#-autores)!
 ```
 
 ### 🔧 Instalação
@@ -81,7 +89,9 @@ Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as vers�
 
 Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
 
-* **Um desenvolvedor** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/linkParaPerfil)
+* **Portho** - *Trabalho Inicial*
+- [GitHub](https://github.com/PorthoGamesBR)
+- [Steam](https://steamcommunity.com/id/porthogamesbr/)
 * **Fulano De Tal** - *Documentação* - [fulanodetal](https://github.com/linkParaPerfil)
 
 Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
