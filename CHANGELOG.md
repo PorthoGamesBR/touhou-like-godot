@@ -50,3 +50,35 @@ Descrição:
 	Contém um PlaceholderTexture2D do tamanho de uma sprite de tiro do jogo 'Lotus Land Story' original
 	```
 	
+# v0.3
+
+Modificada sprite do jogador, modificada sprite do projetil para se adequar ao jogo 'Lotus Land Story'
+Modificado script do jogador para adcionar delay na criação de projeteis, modificado script do projetil para ser deletado depois de alguns segundos
+Modificada configuração de renderização de textura para 'nearest'
+Modificado ponto de criação dos projeteis no player
+Adicionada scene inimigo
+
+Cena: player.tscn
+
+Descrição: 
+	```
+	O jogador é uma Sprite 2D que se move baseado no input do usuário em todas as direções
+	Contém um Texture2D com a sprite da personagem Marisa do jogo 'Lotus Land Story' original
+	Cria projeteis um pouco acima da posição atual quando aperta a tecla Z, com um limite de 0.3 segundos entre cada
+	```
+	
+Cena: projetil.tscn
+
+Descrição: 
+	```
+	Essa cena contém uma Sprite2D que se move constantemente para uma direção definida
+	Contém um Texture2D com uma sprite de tiro do jogo 'Lotus Land Story' original
+	```
+	
+Cena: inimigo.tscn
+
+Descrição: 
+	```
+	Essa cena contém uma Sprite2D que se move em um caminho definido
+	Contém um  PlaceholderTexture2D do tamanho de uma sprite de inimigo fantasma do jogo 'Lotus Land Story' original
+	```

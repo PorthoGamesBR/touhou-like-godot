@@ -1,10 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://bijitp8nbma2f"]
 
+[ext_resource type="Texture2D" uid="uid://fasopp5q1346" path="res://images/NEC PC-9801 - Touhou Gensoukyou Lotus Land Story - Marisa Kirisame.png" id="1_02aqk"]
 [ext_resource type="Script" path="res://scripts/projeteis/projetil.gd" id="1_bsrpi"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_epudj"]
-size = Vector2(16, 16)
-
 [node name="projetil" type="Sprite2D"]
-texture = SubResource("PlaceholderTexture2D_epudj")
+texture = ExtResource("1_02aqk")
+region_enabled = true
+region_rect = Rect2(268, 270.99, 15.9981, 15.9867)
 script = ExtResource("1_bsrpi")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

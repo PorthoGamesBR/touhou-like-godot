@@ -1,6 +1,11 @@
 extends Sprite2D
 
 var plr_velocity = 200
+
+# Shooting system
+var shoot_delay_time_sec = 0.1
+var shoot_delay = 0
+var projectile_offset = Vector2(0,-20)
 # Called when the node enters the scene tree for the first time.
 
 func _ready() -> void:
@@ -13,10 +18,12 @@ func _process(delta: float) -> void:
 	
 	position += direction * plr_velocity * delta
 	
-	if Input.is_action_pressed("shoot"):
+	shoot_delay -= delta
+	if Input.is_action_pressed("shoot") and shoot_delay <= 0:
+		shoot_delay = shoot_delay_time_sec
 		var prj_scene = preload("res://scenes/projeteis/projetil.tscn")
 		var prj_instance = prj_scene.instantiate()
-		prj_instance.global_position = global_position
+		prj_instance.global_position = global_position + projectile_offset
 		get_parent().add_child(prj_instance)
 	
 func calculate_player_direction() -> Vector2:
