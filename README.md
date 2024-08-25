@@ -16,9 +16,9 @@ Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar 
 
 De que coisas você precisa para instalar o software e como instalá-lo?
 
--Godot Engine v4.3 (minimo)
--Steam e Steam Account(Opcional)
-```
+- Godot Engine v4.3 (minimo)
+- Steam e Steam Account(Opcional)
+
 Se tiver Steam:
 	A engine é disponibilizada na propria Steam, instalando como qualquer outro jogo
 Se não tiver Steam:
@@ -27,7 +27,7 @@ Se não tiver Steam:
 Recomendo fortemente [instalar a Steam e criar uma conta](https://store.steampowered.com/about/), e instalar o Godot por lá, simplesmente por que a Steam toma conta dos updates. 
 
 Aproveitando que tem uma conta Steam, [adicione os devs como amigos](#-autores)!
-```
+
 
 ### 🔧 Instalação
 
