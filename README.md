@@ -26,7 +26,7 @@ Se não tiver Steam:
 	
 Recomendo fortemente [instalar a Steam e criar uma conta](https://store.steampowered.com/about/), e instalar o Godot por lá, simplesmente por que a Steam toma conta dos updates. 
 
-Aproveitando que tem uma conta Steam, [adicione os devs como amigos](#-autores)!
+Aproveitando que tem uma conta Steam, [adicione os devs como amigos](#%EF%B8%8F-autores)!
 
 
 ### 🔧 Instalação
