@@ -14,7 +14,8 @@ Descrição: Contém uma Sprite2D que gira quando aperta uma das setas laterais
 
 # v0.2
 
-Adicionado scene personagem jogador, scene da fase de testes, scene da fase 1
+Adicionado scene personagem jogador, scene da fase de testes, scene da fase 1, scene projetil basico
+Adicionada funcionalidade jogador se move na fase, jogador atira projetil ao apertar ctrl
 
 Cena: player.tscn
 
@@ -22,6 +23,7 @@ Descrição:
 	```
 	O jogador é uma Sprite 2D que se move baseado no input do usuário em todas as direções
 	Contém um PlaceholderTexture2D do tamanho de uma sprite do jogo 'Lotus Land Story' original
+	Cria projeteis na posição atual quando aperta a tecla Z
 	```
 
 Cena: fase_teste.tscn
@@ -38,5 +40,13 @@ Descrição:
 	```
 	Essa cena é a primeira fase do jogo, e deve ser usada como base para outras.
 	Contém o jogador, que se move pela cena livremente
+	```
+	
+Cena: projetil.tscn
+
+Descrição: 
+	```
+	Essa cena contém uma Sprite2D que se move constantemente para uma direção definida
+	Contém um PlaceholderTexture2D do tamanho de uma sprite de tiro do jogo 'Lotus Land Story' original
 	```
 	

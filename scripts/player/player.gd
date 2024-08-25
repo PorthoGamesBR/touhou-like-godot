@@ -13,6 +13,12 @@ func _process(delta: float) -> void:
 	
 	position += direction * plr_velocity * delta
 	
+	if Input.is_action_pressed("shoot"):
+		var prj_scene = preload("res://scenes/projeteis/projetil.tscn")
+		var prj_instance = prj_scene.instantiate()
+		prj_instance.global_position = global_position
+		get_parent().add_child(prj_instance)
+	
 func calculate_player_direction() -> Vector2:
 	var x = 0
 	var y = 0
