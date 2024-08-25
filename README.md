@@ -1,12 +1,14 @@
-# Título do projeto
+# Touhou-Like 0.1
 
-Um parágrafo da descrição do projeto vai aqui
+Um projeto de um jogo que imite as mecânicas básiscas de um bullet hell estilo touhou
 
-Nome do Dev Diary: {Titulo do Projeto}
+Nome do Dev Diary: Touhou-Like Game Godot
 
 ## 🚀 Começando
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
+
+_Nem comecei o projeto ainda, então não sei como vai funcionar o clone_
 
 Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto.
 
@@ -14,9 +16,18 @@ Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar 
 
 De que coisas você precisa para instalar o software e como instalá-lo?
 
-```
-Dar exemplos
-```
+- Godot Engine v4.3 (minimo)
+- Steam e Steam Account(Opcional)
+
+Se tiver Steam:
+	A engine é disponibilizada na propria Steam, instalando como qualquer outro jogo
+Se não tiver Steam:
+	Godot está disponível no [site oficial](https://godotengine.org/). Baixe e siga as instruções de instalação
+	
+Recomendo fortemente [instalar a Steam e criar uma conta](https://store.steampowered.com/about/), e instalar o Godot por lá, simplesmente por que a Steam toma conta dos updates. 
+
+Aproveitando que tem uma conta Steam, [adicione os devs como amigos](#%EF%B8%8F-autores)!
+
 
 ### 🔧 Instalação
 
@@ -42,10 +53,10 @@ Explicar como executar os testes automatizados para este sistema.
 
 ### 🔩 Analise os testes de ponta a ponta
 
-Explique que eles verificam esses testes e porquê.
 
 ```
 Dar exemplos
+Explique que eles verificam esses testes e porquê.
 ```
 
 ### ⌨️ E testes de estilo de codificação
@@ -64,9 +75,7 @@ Adicione notas adicionais sobre como implantar isso em um sistema ativo
 
 Mencione as ferramentas que você usou para criar seu projeto
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
-* [Maven](https://maven.apache.org/) - Gerente de Dependência
-* [ROME](https://rometools.github.io/rome/) - Usada para gerar RSS
+* [Godot](https://store.steampowered.com/app/404790/Godot_Engine/) - A Game Engine utilizada
 
 ## 🖇️ Colaborando
 
@@ -80,7 +89,9 @@ Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as vers�
 
 Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
 
-* **Um desenvolvedor** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/linkParaPerfil)
+* **Portho** - *Trabalho Inicial*
+- [GitHub](https://github.com/PorthoGamesBR)
+- [Steam](https://steamcommunity.com/id/porthogamesbr/)
 * **Fulano De Tal** - *Documentação* - [fulanodetal](https://github.com/linkParaPerfil)
 
 Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
