@@ -56,7 +56,7 @@ Modificada sprite do jogador, modificada sprite do projetil para se adequar ao j
 Modificado script do jogador para adcionar delay na criação de projeteis, modificado script do projetil para ser deletado depois de alguns segundos
 Modificada configuração de renderização de textura para 'nearest'
 Modificado ponto de criação dos projeteis no player
-Adicionada scene inimigo
+Adicionada scene inimigo, path_inimigo
 
 Cena: player.tscn
 
@@ -79,6 +79,15 @@ Cena: inimigo.tscn
 
 Descrição: 
 	```
-	Essa cena contém uma Sprite2D que se move em um caminho definido
+	O inimigo é uma Sprite2D que morre quando entra em contato com um projetil criado pelo jogador
 	Contém um  PlaceholderTexture2D do tamanho de uma sprite de inimigo fantasma do jogo 'Lotus Land Story' original
+	```
+	
+Cena: path_inimigo.tscn
+
+Descrição: 
+	```
+	É um Path2D que um inimigo deve seguir
+	Contém um PathFollow2D e um Inimigo
+	O node pai contém um script que controla o progresso de movimento do Inimigo pelo Path, e esse script controla a velocidade baseado no progesso usando uma array de vector2
 	```

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://qldsfo5l1y4t"]
+
+[ext_resource type="Script" path="res://scripts/inimigo/path_inimigo.gd" id="1_iusof"]
+[ext_resource type="PackedScene" uid="uid://c5ihch8bvu0r0" path="res://scenes/inimigo/inimigo.tscn" id="1_ryry0"]
+
+[node name="path_inimigo" type="Path2D"]
+script = ExtResource("1_iusof")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+rotates = false
+loop = false
+
+[node name="Inimigo" parent="PathFollow2D" instance=ExtResource("1_ryry0")]
