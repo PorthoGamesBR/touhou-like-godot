@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b578m48luhr2o"]
+
+[ext_resource type="Texture2D" uid="uid://fasopp5q1346" path="res://images/NEC PC-9801 - Touhou Gensoukyou Lotus Land Story - Marisa Kirisame.png" id="1_o1vug"]
+[ext_resource type="Script" path="res://scripts/projeteis/projetil.gd" id="2_3lrcp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qhagk"]
+radius = 5.09902
+
+[node name="projetil" type="Sprite2D"]
+texture = ExtResource("1_o1vug")
+region_enabled = true
+region_rect = Rect2(268, 270.99, 15.9981, 15.9867)
+script = ExtResource("2_3lrcp")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_qhagk")

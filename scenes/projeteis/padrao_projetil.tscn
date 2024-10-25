@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://8es8gc53ct0x"]
+
+[ext_resource type="PackedScene" uid="uid://bijitp8nbma2f" path="res://scenes/projeteis/projetil.tscn" id="1_evix4"]
+
+[sub_resource type="Animation" id="Animation_2dan5"]
+resource_name = "PadraoTiroSimples"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("projetil:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 9.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 1000)]
+}
+
+[sub_resource type="Animation" id="Animation_qlnmj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("projetil:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3lucg"]
+_data = {
+"PadraoTiroSimples": SubResource("Animation_2dan5"),
+"RESET": SubResource("Animation_qlnmj")
+}
+
+[node name="PadraoProjetil" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3lucg")
+}
+autoplay = "PadraoTiroSimples"
+speed_scale = 10.0
+
+[node name="projetil" parent="." instance=ExtResource("1_evix4")]
+script = null

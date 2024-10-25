@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bijitp8nbma2f"]
+[gd_scene load_steps=4 format=3 uid="uid://bijitp8nbma2f"]
 
 [ext_resource type="Texture2D" uid="uid://fasopp5q1346" path="res://images/NEC PC-9801 - Touhou Gensoukyou Lotus Land Story - Marisa Kirisame.png" id="1_02aqk"]
 [ext_resource type="Script" path="res://scripts/projeteis/projetil.gd" id="1_bsrpi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qhagk"]
+radius = 5.09902
 
 [node name="projetil" type="Sprite2D"]
 texture = ExtResource("1_02aqk")
@@ -12,5 +15,10 @@ script = ExtResource("1_bsrpi")
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 autostart = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_qhagk")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
