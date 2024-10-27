@@ -91,4 +91,32 @@ Descrição:
 	Contém um PathFollow2D e um Inimigo
 	O node pai contém um script que controla o progresso de movimento do Inimigo pelo Path, e esse script controla a velocidade baseado no progesso usando uma array de vector2
 	```
+
+# v0.4
+Adicionado padrao_projetil e AnimationPlayer
+Adicionado AnimationPlayer na fase de teste
+Adicionado script para inimigo
+Mudança nos inimigos na fase de teste
+Mudança no codigo de despawn dos projeteis
+Adicionado os seguintes padrões de projetil no AnimationPlayer:
+	- PadraoTiroSimples
+	- PadraoCirculoSimples
+	- PadraoTiroSimples_enm
+
+Cena: projetil.tscn
+
+Descrição: 
+	```
+	Essa cena contém uma Sprite2D que desaparece após uma quantidade definida de segundos
+	Caso a quantidade seja 0, o projetil nunca some
+	Contém um Texture2D com uma sprite de tiro do jogo 'Lotus Land Story' original
+	```
 	
+Cena: padrao_projetil.tscn
+
+Descrição: 
+	```
+	Essa cena contém 10 projeteis e um AnimationPlayer para controlá-los
+	O AnimationPlayer contém diversas animações representando os padrões de movimento que os projeteis podem ter
+	O AnimationPlayer controla o tempo de vida do padrão e dos projeteis
+	```

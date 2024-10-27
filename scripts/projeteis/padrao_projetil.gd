@@ -1,6 +1,6 @@
 extends Node2D
 
-@export_enum('PadraoTiroSimples', 'PadraoCirculoSimples') var nome_do_padrao : String
+@export_enum('PadraoTiroSimples', 'PadraoCirculoSimples','PadraoTiroSimples_enm') var nome_do_padrao : String
 
 var animation_player : AnimationPlayer
 # Called when the node enters the scene tree for the first time.
