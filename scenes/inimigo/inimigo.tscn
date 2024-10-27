@@ -1,7 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5ihch8bvu0r0"]
+[gd_scene load_steps=3 format=3 uid="uid://c5ihch8bvu0r0"]
+
+[ext_resource type="Script" path="res://scripts/inimigo/inimigo.gd" id="1_qoydh"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kjhdy"]
 size = Vector2(32, 32)
 
 [node name="Inimigo" type="Sprite2D"]
 texture = SubResource("PlaceholderTexture2D_kjhdy")
+script = ExtResource("1_qoydh")

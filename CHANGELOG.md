@@ -91,3 +91,4 @@ Descrição:
 	Contém um PathFollow2D e um Inimigo
 	O node pai contém um script que controla o progresso de movimento do Inimigo pelo Path, e esse script controla a velocidade baseado no progesso usando uma array de vector2
 	```
+	
