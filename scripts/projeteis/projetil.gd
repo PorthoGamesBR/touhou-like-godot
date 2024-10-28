@@ -1,11 +1,12 @@
 extends Sprite2D
 
 @onready var timer : Timer = $Timer
+@onready var collision_area : Area2D = $Area2D
 
 @export var despawn_time_sec: float = 5.0
 
 var direction = Vector2.UP
-var velocity = 1000
+var velocity = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,8 +17,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	# position += direction * velocity * delta
-	pass
+	if velocity > 0:
+		position += direction * velocity * delta
+		
+	collision_area.monitoring = visible
+	collision_area.monitorable = visible
 
 
 func _on_timer_timeout() -> void:

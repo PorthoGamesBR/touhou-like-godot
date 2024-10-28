@@ -15,5 +15,9 @@ func spawn_padrao_projetil(nome: String):
 	get_parent().add_child.call_deferred(p_projetil)
 	p_projetil.global_position = global_position
 	p_projetil.set_padrao(nome)
+	
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
 	queue_free()
 	

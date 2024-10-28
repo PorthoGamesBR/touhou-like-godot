@@ -1,10 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://c5ihch8bvu0r0"]
+[gd_scene load_steps=4 format=3 uid="uid://c5ihch8bvu0r0"]
 
 [ext_resource type="Script" path="res://scripts/inimigo/inimigo.gd" id="1_qoydh"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kjhdy"]
 size = Vector2(32, 32)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7l6g"]
+
 [node name="Inimigo" type="Sprite2D"]
 texture = SubResource("PlaceholderTexture2D_kjhdy")
 script = ExtResource("1_qoydh")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_x7l6g")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

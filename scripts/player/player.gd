@@ -24,6 +24,11 @@ func _process(delta: float) -> void:
 		var prj_scene = preload("res://scenes/projeteis/projetil.tscn")
 		var prj_instance = prj_scene.instantiate()
 		prj_instance.global_position = global_position + projectile_offset
+		prj_instance.velocity = 1000
+		prj_instance.despawn_time_sec = 2
+		var prj_col : Area2D = prj_instance.get_child(1)
+		prj_col.set_collision_layer(1)
+		prj_col.set_collision_mask(2)
 		get_parent().add_child(prj_instance)
 	
 func calculate_player_direction() -> Vector2:
@@ -38,3 +43,7 @@ func calculate_player_direction() -> Vector2:
 	if Input.is_action_pressed("ui_right"):
 		x = Vector2.RIGHT.x
 	return Vector2(x,y)
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	queue_free()
