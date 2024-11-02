@@ -1,4 +1,4 @@
-# Touhou-Like 0.4
+# Touhou-Like 0.5
 
 Um projeto de um jogo que imite as mecânicas básiscas de um bullet hell estilo touhou
 

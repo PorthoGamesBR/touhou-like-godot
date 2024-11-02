@@ -120,3 +120,8 @@ Descrição:
 	O AnimationPlayer contém diversas animações representando os padrões de movimento que os projeteis podem ter
 	O AnimationPlayer controla o tempo de vida do padrão e dos projeteis
 	```
+
+# v0.5
+Mudança no README.md
+Adicionados mais inimigos na fase de teste
+Adicionados grupos de inimigos com AnimationPlayer local e global
