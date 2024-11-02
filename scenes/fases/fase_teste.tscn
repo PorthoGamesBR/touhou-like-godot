@@ -1,145 +1,45 @@
-[gd_scene load_steps=9 format=3 uid="uid://cagomxjg8ukx4"]
+[gd_scene load_steps=14 format=3 uid="uid://cagomxjg8ukx4"]
 
 [ext_resource type="PackedScene" uid="uid://doc1c2gbm7m4p" path="res://scenes/player/player.tscn" id="1_8nv4x"]
 [ext_resource type="PackedScene" uid="uid://qldsfo5l1y4t" path="res://scenes/inimigo/path_inimigo.tscn" id="2_p4sdb"]
 [ext_resource type="PackedScene" uid="uid://8es8gc53ct0x" path="res://scenes/projeteis/padrao_projetil.tscn" id="3_5cxob"]
 [ext_resource type="PackedScene" uid="uid://c5ihch8bvu0r0" path="res://scenes/inimigo/inimigo.tscn" id="4_uutag"]
+[ext_resource type="Texture2D" uid="uid://c68j12gyncx2d" path="res://images/159398.png" id="5_qak1i"]
 
 [sub_resource type="Animation" id="Animation_licij"]
 length = 0.001
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Inimigo2:position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(148, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Inimigo2:position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-39, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Inimigo3:position:x")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(858, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Inimigo3:position:y")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-50, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
 
-[sub_resource type="Animation" id="Animation_cgsv0"]
-resource_name = "fase_tesrte"
-length = 3.0
-tracks/0/type = "method"
+[sub_resource type="Animation" id="Animation_iv6mq"]
+resource_name = "fase_1"
+length = 18.0
+tracks/0/type = "animation"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Inimigo2")
+tracks/0/path = NodePath("Grupo3/AnimationPlayer")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.933333, 1.16667, 1.2, 1.23333, 1.36667, 1.56667, 1.6, 1.63333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"values": [{
-"args": ["PadraoTiroSimples_enm"],
-"method": &"spawn_padrao_projetil"
-}, {
-"args": ["PadraoTiroSimples_enm"],
-"method": &"spawn_padrao_projetil"
-}, {
-"args": ["PadraoTiroSimples_enm"],
-"method": &"spawn_padrao_projetil"
-}, {
-"args": ["PadraoTiroSimples_enm"],
-"method": &"spawn_padrao_projetil"
-}, {
-"args": ["PadraoTiroSimples_enm"],
-"method": &"spawn_padrao_projetil"
-}, {
-"args": ["PadraoTiroSimples_enm"],
-"method": &"spawn_padrao_projetil"
-}, {
-"args": ["PadraoTiroSimples_enm"],
-"method": &"spawn_padrao_projetil"
-}, {
-"args": ["PadraoTiroSimples_enm"],
-"method": &"spawn_padrao_projetil"
-}]
+"clips": PackedStringArray("fase_tesrte"),
+"times": PackedFloat32Array(0)
 }
-tracks/1/type = "bezier"
+tracks/1/type = "animation"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Inimigo2:position:x")
+tracks/1/path = NodePath("Grupo2/AnimationPlayer")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(163.5, -0.25, 0, 0.0666667, 9, 153.5, -0.6, 55, 0.466667, -16, 90, -0.5, 40.5, 0.366667, -76.5),
-"times": PackedFloat32Array(0, 0.9, 2)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Inimigo2:position:y")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(-39, -0.25, 0, 0.25, 0, 148, -0.25, 0, 0.25, 0, 167, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1, 2)
-}
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Inimigo3:position:x")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(858, -0.25, 0, 0.25, 0, 901, -0.25, 0, 0.25, 0, 1289, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0.666667, 1.5, 2.26667)
-}
-tracks/4/type = "bezier"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Inimigo3:position:y")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(-50, -0.25, 0, 0.25, 0, 337, -0.25, 0, 0.25, 0, 353, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0.666667, 1.5, 2.26667)
+"clips": PackedStringArray("fase_tesrte"),
+"times": PackedFloat32Array(2.4)
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iqnr2"]
 _data = {
 "RESET": SubResource("Animation_licij"),
-"fase_tesrte": SubResource("Animation_cgsv0")
+"fase_1": SubResource("Animation_iv6mq")
 }
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_682tg"]
 
 [sub_resource type="Curve2D" id="Curve2D_3e361"]
 _data = {
@@ -147,13 +47,168 @@ _data = {
 }
 point_count = 4
 
+[sub_resource type="Animation" id="Animation_th0ij"]
+resource_name = "new_animation"
+
+[sub_resource type="Animation" id="Animation_18h2g"]
+resource_name = "fase_tesrte"
+length = 6.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Grupo1/Inimigo2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Grupo1/Inimigo2:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(1, 1, 1, 1, 1, 1),
+"points": PackedFloat32Array(163.5, 0, 0, 0, 0, 163.5, 0, 0, 0, 0, 163.5, 0, 0, 0, 0, 163.5, 0, 0, 0, 0, 200.5, 0, 0, 0, 0, 1221, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.866667, 1, 1.8, 2.6, 5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Grupo1/Inimigo2:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(1, 1, 1, 1, 1, 1),
+"points": PackedFloat32Array(-39, 0, 0, 0, 0, -39, 0, 0, 0, 0, -39, 0, 0, 0, 0, 240.011, 0, 0, 0, 0, 328, 0, 0, 0, 0, 340, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.866667, 1, 1.8, 2.6, 5)
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Grupo1/Inimigo3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 1.8, 2.6, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(197, -53), Vector2(197, -53), Vector2(197, 230.011), Vector2(234, 300), Vector2(1251, 300)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Grupo1/Inimigo4:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1, 1.96667, 2.76667, 5.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(164, -69), Vector2(164, -69), Vector2(163.5, 240.011), Vector2(200.5, 328), Vector2(1221, 340)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Grupo1/Inimigo5:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1, 1.96667, 2.76667, 5.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(196, -83), Vector2(196, -83), Vector2(197, 230.011), Vector2(234, 300), Vector2(1251, 300)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Grupo1/Inimigo6:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1, 2.13333, 2.925, 5.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(164, -101), Vector2(164, -101), Vector2(164, 240.011), Vector2(200.5, 328), Vector2(1221, 340)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Grupo1/Inimigo7:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1, 2.13333, 2.93333, 5.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(197, -113), Vector2(197, -113), Vector2(197, 230.011), Vector2(234, 300), Vector2(1251, 300)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Grupo1/Inimigo8:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1, 2.3, 3.1, 5.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(164, -132), Vector2(164, -132), Vector2(164, 240.011), Vector2(200.5, 328), Vector2(1221, 340)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Grupo1/Inimigo9:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1, 2.3, 3.1, 5.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(197, -145), Vector2(197, -145), Vector2(197, 230.011), Vector2(234, 300), Vector2(1251, 300)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Grupo1/Inimigo10:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1, 2.46667, 3.26667, 5.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(164, -166), Vector2(164, -166), Vector2(164, 240.011), Vector2(200.5, 328), Vector2(1221, 340)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Grupo1/Inimigo11:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 1, 2.46667, 3.26667, 5.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(197, -176), Vector2(197, -176), Vector2(197, 230.011), Vector2(234, 300), Vector2(1251, 300)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b4clm"]
+_data = {
+"fase_tesrte": SubResource("Animation_18h2g"),
+"new_animation": SubResource("Animation_th0ij")
+}
+
 [node name="FaseTeste" type="Node2D"]
 
 [node name="Timeline" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_iqnr2")
+"": SubResource("AnimationLibrary_iqnr2"),
+"Grupos": SubResource("AnimationLibrary_682tg")
 }
-autoplay = "fase_tesrte"
+autoplay = "fase_1"
 
 [node name="Player" parent="." instance=ExtResource("1_8nv4x")]
 position = Vector2(591, 576)
@@ -172,8 +227,142 @@ position = Vector2(452, 240)
 [node name="PadraoProjetil3" parent="." instance=ExtResource("3_5cxob")]
 position = Vector2(452, 199)
 
-[node name="Inimigo2" parent="." instance=ExtResource("4_uutag")]
-position = Vector2(148, -39)
+[node name="Grupo3" type="Node2D" parent="."]
 
-[node name="Inimigo3" parent="." instance=ExtResource("4_uutag")]
-position = Vector2(858, -50)
+[node name="Grupo1" type="Node2D" parent="Grupo3"]
+
+[node name="Inimigo2" parent="Grupo3/Grupo1" instance=ExtResource("4_uutag")]
+position = Vector2(1221, 340)
+texture = ExtResource("5_qak1i")
+region_enabled = true
+region_rect = Rect2(11.947, 5.86381, 32.1006, 32.083)
+
+[node name="Inimigo3" parent="Grupo3/Grupo1" instance=ExtResource("4_uutag")]
+position = Vector2(1251, 300)
+texture = ExtResource("5_qak1i")
+region_enabled = true
+region_rect = Rect2(11.947, 5.86381, 32.1006, 32.083)
+
+[node name="Inimigo4" parent="Grupo3/Grupo1" instance=ExtResource("4_uutag")]
+position = Vector2(1221, 340)
+texture = ExtResource("5_qak1i")
+region_enabled = true
+region_rect = Rect2(11.947, 5.86381, 32.1006, 32.083)
+
+[node name="Inimigo5" parent="Grupo3/Grupo1" instance=ExtResource("4_uutag")]
+position = Vector2(1251, 300)
+texture = ExtResource("5_qak1i")
+region_enabled = true
+region_rect = Rect2(11.947, 5.86381, 32.1006, 32.083)
+
+[node name="Inimigo6" parent="Grupo3/Grupo1" instance=ExtResource("4_uutag")]
+position = Vector2(1221, 340)
+texture = ExtResource("5_qak1i")
+region_enabled = true
+region_rect = Rect2(11.947, 5.86381, 32.1006, 32.083)
+
+[node name="Inimigo7" parent="Grupo3/Grupo1" instance=ExtResource("4_uutag")]
+position = Vector2(1251, 300)
+texture = ExtResource("5_qak1i")
+region_enabled = true
+region_rect = Rect2(11.947, 5.86381, 32.1006, 32.083)
+
+[node name="Inimigo8" parent="Grupo3/Grupo1" instance=ExtResource("4_uutag")]
+position = Vector2(1221, 340)
+texture = ExtResource("5_qak1i")
+region_enabled = true
+region_rect = Rect2(11.947, 5.86381, 32.1006, 32.083)
+
+[node name="Inimigo9" parent="Grupo3/Grupo1" instance=ExtResource("4_uutag")]
+position = Vector2(1251, 300)
+texture = ExtResource("5_qak1i")
+region_enabled = true
+region_rect = Rect2(11.947, 5.86381, 32.1006, 32.083)
+
+[node name="Inimigo10" parent="Grupo3/Grupo1" instance=ExtResource("4_uutag")]
+position = Vector2(1221, 340)
+texture = ExtResource("5_qak1i")
+region_enabled = true
+region_rect = Rect2(11.947, 5.86381, 32.1006, 32.083)
+
+[node name="Inimigo11" parent="Grupo3/Grupo1" instance=ExtResource("4_uutag")]
+position = Vector2(1251, 300)
+texture = ExtResource("5_qak1i")
+region_enabled = true
+region_rect = Rect2(11.947, 5.86381, 32.1006, 32.083)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Grupo3"]
+libraries = {
+"": SubResource("AnimationLibrary_b4clm")
+}
+
+[node name="Grupo2" type="Node2D" parent="."]
+position = Vector2(1172, 0)
+scale = Vector2(-1, 1)
+
+[node name="Grupo1" type="Node2D" parent="Grupo2"]
+
+[node name="Inimigo2" parent="Grupo2/Grupo1" instance=ExtResource("4_uutag")]
+position = Vector2(163.5, -39)
+texture = ExtResource("5_qak1i")
+region_enabled = true
+region_rect = Rect2(11.947, 5.86381, 32.1006, 32.083)
+
+[node name="Inimigo3" parent="Grupo2/Grupo1" instance=ExtResource("4_uutag")]
+position = Vector2(197, -53)
+texture = ExtResource("5_qak1i")
+region_enabled = true
+region_rect = Rect2(11.947, 5.86381, 32.1006, 32.083)
+
+[node name="Inimigo4" parent="Grupo2/Grupo1" instance=ExtResource("4_uutag")]
+position = Vector2(164, -69)
+texture = ExtResource("5_qak1i")
+region_enabled = true
+region_rect = Rect2(11.947, 5.86381, 32.1006, 32.083)
+
+[node name="Inimigo5" parent="Grupo2/Grupo1" instance=ExtResource("4_uutag")]
+position = Vector2(196, -83)
+texture = ExtResource("5_qak1i")
+region_enabled = true
+region_rect = Rect2(11.947, 5.86381, 32.1006, 32.083)
+
+[node name="Inimigo6" parent="Grupo2/Grupo1" instance=ExtResource("4_uutag")]
+position = Vector2(164, -101)
+texture = ExtResource("5_qak1i")
+region_enabled = true
+region_rect = Rect2(11.947, 5.86381, 32.1006, 32.083)
+
+[node name="Inimigo7" parent="Grupo2/Grupo1" instance=ExtResource("4_uutag")]
+position = Vector2(197, -113)
+texture = ExtResource("5_qak1i")
+region_enabled = true
+region_rect = Rect2(11.947, 5.86381, 32.1006, 32.083)
+
+[node name="Inimigo8" parent="Grupo2/Grupo1" instance=ExtResource("4_uutag")]
+position = Vector2(164, -132)
+texture = ExtResource("5_qak1i")
+region_enabled = true
+region_rect = Rect2(11.947, 5.86381, 32.1006, 32.083)
+
+[node name="Inimigo9" parent="Grupo2/Grupo1" instance=ExtResource("4_uutag")]
+position = Vector2(197, -145)
+texture = ExtResource("5_qak1i")
+region_enabled = true
+region_rect = Rect2(11.947, 5.86381, 32.1006, 32.083)
+
+[node name="Inimigo10" parent="Grupo2/Grupo1" instance=ExtResource("4_uutag")]
+position = Vector2(164, -166)
+texture = ExtResource("5_qak1i")
+region_enabled = true
+region_rect = Rect2(11.947, 5.86381, 32.1006, 32.083)
+
+[node name="Inimigo11" parent="Grupo2/Grupo1" instance=ExtResource("4_uutag")]
+position = Vector2(197, -176)
+texture = ExtResource("5_qak1i")
+region_enabled = true
+region_rect = Rect2(11.947, 5.86381, 32.1006, 32.083)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Grupo2"]
+libraries = {
+"": SubResource("AnimationLibrary_b4clm")
+}

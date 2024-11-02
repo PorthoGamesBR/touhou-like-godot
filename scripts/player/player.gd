@@ -27,8 +27,10 @@ func _process(delta: float) -> void:
 		prj_instance.velocity = 1000
 		prj_instance.despawn_time_sec = 2
 		var prj_col : Area2D = prj_instance.get_child(1)
+		
 		prj_col.set_collision_layer(1)
 		prj_col.set_collision_mask(2)
+		
 		get_parent().add_child(prj_instance)
 	
 func calculate_player_direction() -> Vector2:
