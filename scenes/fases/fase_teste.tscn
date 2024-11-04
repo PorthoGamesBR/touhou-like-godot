@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cagomxjg8ukx4"]
+[gd_scene load_steps=15 format=3 uid="uid://cagomxjg8ukx4"]
 
 [ext_resource type="PackedScene" uid="uid://doc1c2gbm7m4p" path="res://scenes/player/player.tscn" id="1_8nv4x"]
 [ext_resource type="PackedScene" uid="uid://qldsfo5l1y4t" path="res://scenes/inimigo/path_inimigo.tscn" id="2_p4sdb"]
@@ -46,9 +46,6 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 209, -32, 0, 0, 0, 0, 181, 238, 0, 0, 0, 0, 108, 291, 0, 0, 0, 0, -42, 322)
 }
 point_count = 4
-
-[sub_resource type="Animation" id="Animation_th0ij"]
-resource_name = "new_animation"
 
 [sub_resource type="Animation" id="Animation_18h2g"]
 resource_name = "fase_tesrte"
@@ -195,11 +192,16 @@ tracks/11/keys = {
 "values": [Vector2(197, -176), Vector2(197, -176), Vector2(197, 230.011), Vector2(234, 300), Vector2(1251, 300)]
 }
 
+[sub_resource type="Animation" id="Animation_th0ij"]
+resource_name = "new_animation"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b4clm"]
 _data = {
 "fase_tesrte": SubResource("Animation_18h2g"),
 "new_animation": SubResource("Animation_th0ij")
 }
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4k7xq"]
 
 [node name="FaseTeste" type="Node2D"]
 
@@ -211,7 +213,9 @@ libraries = {
 autoplay = "fase_1"
 
 [node name="Player" parent="." instance=ExtResource("1_8nv4x")]
-position = Vector2(591, 576)
+position = Vector2(405, 607)
+min_pos = Vector2(16, 24)
+max_pos = Vector2(759, 624)
 
 [node name="Inimigo" parent="." instance=ExtResource("2_p4sdb")]
 visible = false
@@ -297,7 +301,7 @@ libraries = {
 }
 
 [node name="Grupo2" type="Node2D" parent="."]
-position = Vector2(1172, 0)
+position = Vector2(813, 0)
 scale = Vector2(-1, 1)
 
 [node name="Grupo1" type="Node2D" parent="Grupo2"]
@@ -366,3 +370,22 @@ region_rect = Rect2(11.947, 5.86381, 32.1006, 32.083)
 libraries = {
 "": SubResource("AnimationLibrary_b4clm")
 }
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+material = SubResource("CanvasItemMaterial_4k7xq")
+custom_minimum_size = Vector2(400, 800)
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 774.0
+offset_top = -45.0
+offset_right = 1174.0
+offset_bottom = 755.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="BoxContainer"]
+custom_minimum_size = Vector2(400, 800)
+layout_mode = 2
+color = Color(0, 0, 0, 1)

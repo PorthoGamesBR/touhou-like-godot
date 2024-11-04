@@ -8,14 +8,24 @@ var shoot_delay = 0
 var projectile_offset = Vector2(0,-20)
 # Called when the node enters the scene tree for the first time.
 
+@export var min_pos : Vector2
+@export var max_pos : Vector2
+
 func _ready() -> void:
-	pass # Replace with function bod
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var direction = calculate_player_direction()
 	
+	var final_pos = position + (direction * plr_velocity * delta)
+	if final_pos.x < min_pos.x or final_pos.x > max_pos.x:
+		direction.x = 0
+	
+	if final_pos.y < min_pos.y or final_pos.y > max_pos.y:
+		direction.y = 0
+		
 	position += direction * plr_velocity * delta
 	
 	shoot_delay -= delta
