@@ -17,16 +17,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var direction = calculate_player_direction()
 	
-	var final_pos = position + (direction * plr_velocity * delta)
-	if final_pos.x < min_pos.x or final_pos.x > max_pos.x:
-		direction.x = 0
-	
-	if final_pos.y < min_pos.y or final_pos.y > max_pos.y:
-		direction.y = 0
-		
-	position += direction * plr_velocity * delta
+	# Player movement script
+	move_player(delta)
 	
 	shoot_delay -= delta
 	if Input.is_action_pressed("shoot") and shoot_delay <= 0:
@@ -56,6 +49,17 @@ func calculate_player_direction() -> Vector2:
 		x = Vector2.RIGHT.x
 	return Vector2(x,y)
 
-
+func move_player(delta) -> void:
+	var direction = calculate_player_direction()
+	
+	var final_pos = position + (direction * plr_velocity * delta)
+	if final_pos.x < min_pos.x or final_pos.x > max_pos.x:
+		direction.x = 0
+	
+	if final_pos.y < min_pos.y or final_pos.y > max_pos.y:
+		direction.y = 0
+		
+	position += direction * plr_velocity * delta
+	
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	queue_free()
